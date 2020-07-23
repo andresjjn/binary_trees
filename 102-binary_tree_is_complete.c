@@ -45,6 +45,8 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	unsigned int nodes_count = 0;
 	bool complete = true;
 
+	if (!tree)
+		return (0);
 	nodes_count = countNodes(tree);
 	complete = isComplete(tree, index, nodes_count);
 	if (complete == true)
